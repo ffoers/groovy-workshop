@@ -1,0 +1,12 @@
+== Filenames != Classnames
+Eine `*.groovy` Datei kann eine oder mehrere Klassen enthalten. Der Name einer `*.groovy` Datei muss nicht mit einer enthaltenen Klasse übereinstimmen.
+
+[source, groovy]
+.MultipleClasses.groovy
+----
+class Class1{
+}
+
+class Class2{
+}
+----

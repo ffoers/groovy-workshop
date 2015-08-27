@@ -1,0 +1,14 @@
+*.iws
+build/
+.gradle/
+puppet/
+.classpath
+.project
+.idea/
+*.iws
+*.iml
+*.ipr
+target
+*.swp
+.vagrant
+*.war

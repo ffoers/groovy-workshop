@@ -1,0 +1,14 @@
+== Easily Executable Scripts
+Mit installiertem Groovy (z.B.) via gvm, können `*.groovy` Dateien ausgeführt werden. Groovy Scripts werden nicht von einem Interpreter
+ausgeführt. Tatsächlich werden Scripts zu Klassen kompiliert, die von groovy.lang.Script erben und eine `main` Methode haben. Der Name
+der kompilierten Klasse ist der Name Script-Datei
+
+[source,groovy,options="nowrap"]
+.script.groovy
+----
+println 'Hello World!'
+----
+
+ groovy example.groovy
+
+Kompiliert zu Example.class und führt deren `main` Methode aus.

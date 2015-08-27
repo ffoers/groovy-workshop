@@ -1,0 +1,11 @@
+== Operators To The Rescue!
+=== nullsafe Operator
+Groovy hat einen sehr praktischen Operator `?.` , der `NullPointerExceptions` vermeiden hilft, den nullsafe Operator.
+Wenn der nullsafe Operator auf einer Variablen benutzt wird, deren Wert `null` ist, so ist das Ergebnis des Operators auch `null`.
+Wenn der Wert der Variablen nicht `null` ist, wird der Zugriff nach dem Operator ausgeführt.
+
+[source,groovy,options="nowrap"]
+.nullsafe.groovy
+----
+include::{groovyExamples}/nullsafe.groovy[]
+----

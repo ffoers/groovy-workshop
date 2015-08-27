@@ -1,0 +1,13 @@
+== Power Asserts
+Groovy kennt genauso wie Java das Schlüsselwort `assert`, um Zusicherungen(Assertions) im Code machen zu können.
+Hierbei gibt es zwei wesentliche Unterschiede:
+
+<1> Im Gegensatz zu Java sind die Assertions in Groovy immer eingeschaltet
+<2> Eine fehlgeschlagene Assertion in Java wirft einen `java.lang.AssertionError`, in Groovy ist es ein `org.codehaus.groovy.runtime.powerassert.PowerAssertionError`.
+
+
+[source,groovy,options="nowrap"]
+.assertions.groovy
+----
+include::{groovyExamples}/assertions.groovy[]
+----

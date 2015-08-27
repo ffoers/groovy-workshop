@@ -1,0 +1,63 @@
+buildscript {
+    repositories {
+        jcenter()
+    }
+
+    dependencies {
+        classpath 'com.bluepapa32:gradle-watch-plugin:0.1.5'
+        classpath 'org.asciidoctor:asciidoctor-gradle-plugin:1.5.2'
+    }
+}
+
+apply plugin: 'org.asciidoctor.convert'
+apply plugin: 'idea'
+apply plugin: 'groovy'
+apply plugin: 'com.bluepapa32.watch'
+
+def groovy_version = '2.4.2'
+
+dependencies {
+    compile "org.codehaus.groovy:groovy-all:${groovy_version}"
+
+    //Spock etc.
+    testCompile "org.spockframework:spock-core:1.0-groovy-2.4"
+    testRuntime "cglib:cglib-nodep:3.1"
+    testRuntime "org.objenesis:objenesis:2.1"
+}
+
+asciidoctor{
+    backends = ['html5', 'docbook']
+    options = [
+            attributes: [
+                    toc: 'right',
+                    'source-highlighter': 'coderay',
+                    'toc-title': 'Table of Contents'
+            ]
+    ]
+}
+
+watch {
+    asciidocs{
+        files fileTree(dir: 'src/docs/asciidoc',
+			include: '**/*.adoc')
+        tasks 'asciidoctor'
+    }
+}
+
+task runAll {
+    description = 'run all groovy scripts'
+    fileTree(dir: 'src/main/groovy', include:'**/*.groovy').each { file ->
+        doLast {
+            javaexec {
+                main
+                classpath = sourceSets.main.runtimeClasspath
+            }
+        }
+    }
+}
+
+task runScript (dependsOn: 'classes', type: JavaExec) {
+    main = 'examples.Main'
+    classpath = sourceSets.main.runtimeClasspath
+    enableAssertions = true
+}

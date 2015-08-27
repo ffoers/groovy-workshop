@@ -1,0 +1,24 @@
+== Simple Improvements
+=== Optional Semicolons
+In Groovy müssen Statements nicht mit einem Semikolon abgeschlossen werden. Wer möchte, kann dies dennoch tun, verlässt damit
+aber die Grenzen idiomatischen Groovys.
+[source,groovy,options="nowrap"]
+.optionalSemicolons.groovy
+----
+include::{groovyExamples}/optionalSemicolons.groovy[]
+----
+
+=== Public by Default
+In Java sind alle Klassen automatisch public. Ist dies nicht gewünscht, kann die Sichtbarkeit wie in Java eingeschränkt werden.
+Allerdings kann in Groovy auch auch `private` Methoden, Klassen etc. zugegriffen werden.
+
+=== Classes are First-Class Citizens
+[source,groovy,options="nowrap"]
+.firstClassClasses.groovy
+----
+include::{groovyExamples}/firstClassClasses.groovy[]
+----
+
+=== Optional `return` Statement
+
+=== No Checked Exceptions Terror!

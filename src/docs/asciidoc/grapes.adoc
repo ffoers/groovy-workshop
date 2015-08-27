@@ -1,0 +1,8 @@
+
+== Grapes
+Groovy Grapes ist ein Mittel zur Dependency-Verwaltung in self-contained `*.groovy` Scripts.
+[source,groovy,options="nowrap"]
+.grapes.groovy
+----
+include::{groovyExamples}/grapes.groovy[]
+----

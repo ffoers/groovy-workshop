@@ -1,0 +1,70 @@
+= Groovy Workshop - Handout
+:source-highlighter: prettify
+:sectnums:
+:code: ../../main
+:groovyExamples: ../../examples
+
+In diesem Handout findet ihr die behandelten Themen noch einmal zum nachschlagen
+
+== Java Is Valid Groovy, Almost Everytime
+Groovy ist Java sehr eng verwandt, die meisten Änderungen sind Ergänzungen und optionale verkürzungen, so dass Java Code in
+der Regel auch valider Groovy Code ist. Es gibt jedoch Ausnahmen, die es zu beachten gilt und die im weiteren Verlauf
+dieses Dokuementes gekennzeichnet sind.
+
+include::simple.adoc[]
+include::easily_executable_scripts.adoc[]
+include::grapes.adoc[]
+include::filenames.adoc[]
+include::operators.adoc[]
+
+== groovy equals
+
+== Optional Typing
+
+== Syntactic Sugar
+=== Convenience Methods
+Java
+System.out.println("A String")
+Groovy
+println "A String"
+=== Parantheses
+== Groovy Truth
+== the .with magic
+== Strings
+=== Format
+=== GStrings
+=== Index Acces etc.
+== Property Access
+
+== Collection Literals
+=== Lists
+=== Maps
+=== Ranges
+
+== AST Transformation Annotations
+=== @Lazy
+@Lazy String do = {'aha'}()
+
+=== @Delegate
+=== @Slf4J
+=== @Singleton
+=== @TailRecursive
+=== @ToString
+=== @Builder
+=== @EqualsAndHashCode
+=== @Sortable
+=== @IndexedProperty
+=== @TypeChecked
+=== @Immutable
+
+== Closures
+=== Currying
+=== Composition
+=== Closure Coercion
+
+== regexes
+
+== Collection Comprehension
+===
+
+== DSLs
