@@ -1,9 +1,7 @@
-import groovy.transform.CompileStatic
 import groovy.transform.ToString
 
 //Delegate Handling
 
-@CompileStatic
 @ToString
 class Stuff {
     Integer integer
@@ -13,7 +11,6 @@ class Stuff {
     }
 }
 
-@CompileStatic
 Stuff bla(Closure dsl) {
     def p = new Stuff() {}
     def code = dsl.rehydrate(p, this, this)
@@ -35,3 +32,7 @@ Stuff createStuff() {
 println createStuff()
 
 //TODO: Create a DSL that has sensible defaults but can configure a server with hostname, port, useTls
+
+//dynamic
+//def
+// MOP
